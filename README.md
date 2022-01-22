@@ -43,3 +43,7 @@
 # Commit 9 : Move handleClick, calculateWinner to Game and delete constructor of Board
 
 ทำการลบ constructor ที่ Board และทำการสร้าง constructor ที่ Game และย้าย handleClick และ calculateWinner จาก Board ไปที่ Game และในส่วนของ render ของ Board เหลือแค่การเเสดงผลของ board เท่านั้น จากนั้นในส่วนของ render Game ทำการเก็บค่า history ในรูปแบบ array 2 มิติ โดยมีหน้าที่เก็บค่า array ของทั้งตารางในเเต่ละรอบ จากนั้นมีการเก็บค่า current ซึ่งมีไว้เก็บค่าตาราง ณ ตำแหน่งนั้นๆของตาราง และมีการเก็บค่า winner ซึ่งมีไว้เก็บค่า X O หรือ null เพื่อไว้เช็คเงื่อนไข ต่อมาสร้างตัวเเปร status ขึ้นมาเพื่อเก็บข้อความไว้เเสดงผลว่าใครชนะ หรือ ว่าตานั้นเป็นของใคร
+
+# Commit 10 : Add jumpTo function to change board history
+
+ทำการเพิ่มปุ่มประวัติการเล่น โดยการวนค่าใน history เพื่อใช้สร้างปุ่มที่สามารถกดเพื่อเปลี่ยนตารางให้เป็นแบบที่เก็บไว้ในประวัติได้ โดยที่ทำการเรียกใช้ function jumpTo ด้วยการส่ง step ไป และมีการเพิ่ม stepNumber ไว้ใน state เพื่อเก็บค่าของรอบของการเล่น และในส่วนของ function jumpTo ที่เพิ่มเข้ามานั้นจะไปทำการเปลี่ยนค่า stepNumber ให้เท่ากับ step ที่เราเลือกและเปลี่ยนค่า xIsNext ให้ตรงตามอักษรของผู้เล่นในตานั้นๆ และสุดท้ายจะมีการเพิ่มการทำงานในส่วนของการลบประวัติซึงทำด้วยการ slice array ของ history ให้เหลือแค่ index แรกจนถึงที่เรากด
