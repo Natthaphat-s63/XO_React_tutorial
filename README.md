@@ -5,7 +5,10 @@
 - logo.svg
 - reportWebVitals.js
 - setupTests.js <br>
+
+
 จากนั้นแก้ไขโค้ดในส่วนของ App.js โดยลบทั้งหมดใน return แล้วใส่แค่ div tag <br>
+
 
 # Commit 2 : Create Board,Square and Game Components
 
@@ -26,3 +29,8 @@ return ปุ่มที่มี className เป็น square โดยเเ
 # Commit 3 : Edit index.css for beautiful UI
 
 เปลี่ยน Code ใน index.css ให้เป็นไปตามใน Tutorial เพื่อเปลี่ยนรูปแบบแต่ละ Component ให้สวยงามขึ้น
+
+
+# Commit 4 : Add Constructor and EventListener in Square Component
+
+สร้าง EventListener โดยให้รับเป็น Event การกดคลิกเมาส์ ซึ่งเป็น HTML Attribute ของ Button ก็คือ onClick โดยให้เป็น Function ที่ทำการแสดงข้อความว่า click ใน console ของ Browser จากนั้นสร้าง constructor ของ Square เพื่อให้รับ props ได้ จากนั้นสร้าง state เริ่มต้น โดยให้ค่า value เป็น null
