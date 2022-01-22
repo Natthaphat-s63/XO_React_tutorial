@@ -21,3 +21,8 @@ return ปุ่มที่มี className เป็น square โดยเเ
 ส่วน Game.js เรียกใช้ Board
 
 สุดท้ายใน App.js ทำการเรียกใช้ Game อีกทีหนึ่ง
+
+
+# Commit 3 : Edit index.css for beautiful UI
+
+เปลี่ยน Code ใน index.css ให้เป็นไปตามใน Tutorial เพื่อเปลี่ยนรูปแบบแต่ละ Component ให้สวยงามขึ้น
