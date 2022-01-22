@@ -31,3 +31,7 @@
 # Commit 6 : Move stored game state from Square to Board and create handleClick function in Board
 
 ลบ constructor ของ Square แล้วไปสร้าง constructor สำหรับเก็บ state ของตัวเกม XO ไว้ใน Board แทนเพื่อที่จะสามารถเก็บข้อมูลของทั้งตารางได้ เเละ สร้าง handleClick function เพื่อรับค่า index ของช่องที่ถูกกดและเปลี่ยนค่าของช่องนั้นให้เป็น X แล้วเก็บค่า state ของตำแหน่งนั้นๆ
+
+# Commit 7 : Change Square form Class component to Function component and add player changing method
+
+เปลี่ยน Square จาก Class component ให้เป็น Function component แทน เพื่อให้ code มีความสั้นลง และเพิ่มค่าใน state คือค่า xIsNext เพื่อนำไปใช้ในการกำหนดผู้เล่นคนต่อไป ซึ่งจะไปกำหนดว่าจะเป็นตาของผู้เล่น X หรือ O ในตัวของ handleClick และใน handleClick มีการเพิ่มให้สามารถแสดงผลเป็น X หรือ O ได้ จากเดิมที่ได้แค่ตัว X และมีการ setState เพื่อบันทึกตาราง และเปลี่ยนค่า xIsNext ให้เป็นค่าตรงข้ามกับค่าปัจจุบัน และได้ทำการสร้างการแสดงข้อความ "Next player: " เพื่อให้ผู้เล่นทราบว่าเป็นตาของ X หรือ O 
