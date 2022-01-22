@@ -34,3 +34,7 @@ return ปุ่มที่มี className เป็น square โดยเเ
 # Commit 4 : Add Constructor and EventListener in Square Component
 
 สร้าง EventListener โดยให้รับเป็น Event การกดคลิกเมาส์ ซึ่งเป็น HTML Attribute ของ Button ก็คือ onClick โดยให้เป็น Function ที่ทำการแสดงข้อความว่า click ใน console ของ Browser จากนั้นสร้าง constructor ของ Square เพื่อให้รับ props ได้ จากนั้นสร้าง state เริ่มต้น โดยให้ค่า value เป็น null
+
+# Commit 5 : Change onClick function to setState for displaying X
+
+เปลี่ยนจาก function onClick จากที่แสดงบน console log เป็นการเปลี่ยน state ของ Square ให้มีค่า value เป็น X แล้วเปลี่ยนข้อความบนปุ่มเป็นค่า state.value นั้น ดังนั้นเวลาที่เรากดปุ่ม จะแสดงค่า X บนช่อง
