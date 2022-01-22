@@ -4,5 +4,20 @@
 - App.test.js
 - logo.svg
 - reportWebVitals.js
-- setupTests.js
-จากนั้นแก้ไขโค้ดในส่วนของ App.js โดยลบทั้งหมดใน return แล้วใส่แค่ <div></div>
+- setupTests.js <br>
+จากนั้นแก้ไขโค้ดในส่วนของ App.js โดยลบทั้งหมดใน return แล้วใส่แค่ div tag <br>
+
+# Commit 2 : Create Board,Square and Game Components
+
+สร้าง File ชื่อ Board.js, Square.js และ Game.js โดยทั้งสามไฟล์เป็น Components
+จากนั้นทำการเขียนในไฟล์ Board.js โดยสร้างเป็น Class Component ที่มีชื่อ Board โดย
+มี Function ชื่อ renderSquare โดยรับ parameter i แล้วทำการ return เป็น Square
+Component ส่งค่า i เป็น props เป็น value ฉะนั้น Board ทำหน้าที่ส่งสร้าง Square ตามจำนวน i 
+จากนั้น Function render ทำการ return โดยเรียกใช้ renderSquare โดยส่งเลขเป็นเลขตำแหน่งปุ่ม 0-8
+
+ส่วนใน File Square.js เป็น Class Component เหมือนกันโดยมี Function render ทำหน้าที่
+return ปุ่มที่มี className เป็น square โดยเเสดงผลข้อความตามค่า value ที่รับมาผ่าน props
+
+ส่วน Game.js เรียกใช้ Board
+
+สุดท้ายใน App.js ทำการเรียกใช้ Game อีกทีหนึ่ง
