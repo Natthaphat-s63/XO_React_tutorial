@@ -39,3 +39,7 @@
 # Commit 8 : Add calculateWinner and use it in handleClick
 
 สร้าง function calculateWinner ที่รับ argument มาเป็น array ของทั้งตาราง แล้วนำค่านั้นมาเช็ค pattern ว่าชนะหรือไม่ แล้วใครเป็นผู้ชนะ โดยจะ return เป็น X หรือ O ถ้าชนะ แต่ถ้าไม่ก็จะ return null โดยจะใช้ใน function handleClick อีกทีโดยจะเช็คว่าใครชนะหรือเสมอในที่นี้เสมอคือ calculateWinner return null แต่ square[i] จะมีค่านั่นคือใส่ครบทั้งตาราง ถ้าเกิดชนะหรือเสมอแล้วก็ถือว่าจบเกม กดวางตัว X O ต่อไม่ได้ 
+
+# Commit 9 : Move handleClick, calculateWinner to Game and delete constructor of Board
+
+ทำการลบ constructor ที่ Board และทำการสร้าง constructor ที่ Game และย้าย handleClick และ calculateWinner จาก Board ไปที่ Game และในส่วนของ render ของ Board เหลือแค่การเเสดงผลของ board เท่านั้น จากนั้นในส่วนของ render Game ทำการเก็บค่า history ในรูปแบบ array 2 มิติ โดยมีหน้าที่เก็บค่า array ของทั้งตารางในเเต่ละรอบ จากนั้นมีการเก็บค่า current ซึ่งมีไว้เก็บค่าตาราง ณ ตำแหน่งนั้นๆของตาราง และมีการเก็บค่า winner ซึ่งมีไว้เก็บค่า X O หรือ null เพื่อไว้เช็คเงื่อนไข ต่อมาสร้างตัวเเปร status ขึ้นมาเพื่อเก็บข้อความไว้เเสดงผลว่าใครชนะ หรือ ว่าตานั้นเป็นของใคร
