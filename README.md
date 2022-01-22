@@ -35,3 +35,7 @@
 # Commit 7 : Change Square form Class component to Function component and add player changing method
 
 เปลี่ยน Square จาก Class component ให้เป็น Function component แทน เพื่อให้ code มีความสั้นลง และเพิ่มค่าใน state คือค่า xIsNext เพื่อนำไปใช้ในการกำหนดผู้เล่นคนต่อไป ซึ่งจะไปกำหนดว่าจะเป็นตาของผู้เล่น X หรือ O ในตัวของ handleClick และใน handleClick มีการเพิ่มให้สามารถแสดงผลเป็น X หรือ O ได้ จากเดิมที่ได้แค่ตัว X และมีการ setState เพื่อบันทึกตาราง และเปลี่ยนค่า xIsNext ให้เป็นค่าตรงข้ามกับค่าปัจจุบัน และได้ทำการสร้างการแสดงข้อความ "Next player: " เพื่อให้ผู้เล่นทราบว่าเป็นตาของ X หรือ O 
+
+# Commit 8 : Add calculateWinner and use it in handleClick
+
+สร้าง function calculateWinner ที่รับ argument มาเป็น array ของทั้งตาราง แล้วนำค่านั้นมาเช็ค pattern ว่าชนะหรือไม่ แล้วใครเป็นผู้ชนะ โดยจะ return เป็น X หรือ O ถ้าชนะ แต่ถ้าไม่ก็จะ return null โดยจะใช้ใน function handleClick อีกทีโดยจะเช็คว่าใครชนะหรือเสมอในที่นี้เสมอคือ calculateWinner return null แต่ square[i] จะมีค่านั่นคือใส่ครบทั้งตาราง ถ้าเกิดชนะหรือเสมอแล้วก็ถือว่าจบเกม กดวางตัว X O ต่อไม่ได้ 
